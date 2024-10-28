@@ -10,6 +10,26 @@ def createStorage():
 @app.route('/')
 def index():
     return render_template('index.html')
+
+@app.route('/data')
+def data():
+    return render_template('data.html')
+
+@app.route('/music')
+def music():
+    return render_template('music.html')
+
+@app.route('/tv')
+def tv():
+    return render_template('tv.html')
+
+@app.route('/movies')
+def movies():
+    return render_template('movies.html')
+
+@app.route('/photos')
+def photos():
+    return render_template('photos.html')
 if __name__ == "__main__":
     createStorage()
     app.run(

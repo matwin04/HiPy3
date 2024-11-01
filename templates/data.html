@@ -2,9 +2,23 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Title</title>
+  <title>Data Storage</title>
 </head>
 <body>
-
+  <h1>Data Storage</h1>
+  <table border="1">
+    <tr>
+      <th>Name</th>
+      <th>Path</th>
+      <th>Size (bytes)</th>
+    </tr>
+    {% for row in rows %}
+      <tr>
+        <td>{{ row['name'] }}</td>
+        <td>{{ row['path'] }}</td>
+        <td>{{ row['size'] }}</td>
+      </tr>
+    {% endfor %}
+  </table>
 </body>
 </html>

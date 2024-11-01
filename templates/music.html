@@ -1,10 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+  <meta charset="UTF-8">
+  <title>Music Storage</title>
 </head>
 <body>
-
+  <h1>Music Storage</h1>
+  <table border="1">
+    <tr>
+      <th>Title</th>
+      <th>Artist</th>
+      <th>Album</th>
+      <th>Track Number</th>
+      <th>Genre</th>
+      <th>Year</th>
+    </tr>
+    {% for row in rows %}
+      <tr>
+        <td>{{ row['title'] }}</td>
+        <td>{{ row['artist'] }}</td>
+        <td>{{ row['album'] }}</td>
+        <td>{{ row['track_number'] }}</td>
+        <td>{{ row['genre'] }}</td>
+        <td>{{ row['year'] }}</td>
+      </tr>
+    {% endfor %}
+  </table>
 </body>
 </html>

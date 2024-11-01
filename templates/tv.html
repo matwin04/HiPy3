@@ -1,10 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+  <meta charset="UTF-8">
+  <title>TV Storage</title>
 </head>
 <body>
-
+  <h1>TV Storage</h1>
+  <table border="1">
+    <tr>
+      <th>Series</th>
+      <th>Season</th>
+      <th>Episode</th>
+      <th>Title</th>
+      <th>Air Date</th>
+      <th>Genre</th>
+    </tr>
+    {% for row in rows %}
+      <tr>
+        <td>{{ row['series'] }}</td>
+        <td>{{ row['season'] }}</td>
+        <td>{{ row['episode'] }}</td>
+        <td>{{ row['title'] }}</td>
+        <td>{{ row['air_date'] }}</td>
+        <td>{{ row['genre'] }}</td>
+      </tr>
+    {% endfor %}
+  </table>
 </body>
 </html>

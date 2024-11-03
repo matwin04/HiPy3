@@ -14,6 +14,7 @@
       <th>Title</th>
       <th>Air Date</th>
       <th>Genre</th>
+      <th>Edit</th>
     </tr>
     {% for row in rows %}
       <tr>
@@ -23,6 +24,7 @@
         <td>{{ row['title'] }}</td>
         <td>{{ row['air_date'] }}</td>
         <td>{{ row['genre'] }}</td>
+        <td><a href="{{ url_for('edit_metadata', media_type='tv', id=row['id']) }}">Edit</a></td>
       </tr>
     {% endfor %}
   </table>

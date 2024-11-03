@@ -10,19 +10,17 @@ DROP TABLE IF EXISTS photos;
 -- General files table (for miscellaneous data files)
 CREATE TABLE "data" (
     "id" INTEGER PRIMARY KEY AUTOINCREMENT,
-    "name" TEXT NOT NULL,
     "path" TEXT NOT NULL,
     "size" INTEGER,
     "created_at" TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     "modified_at" TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    "file_type" TEXT,  -- Type of file (e.g., PDF, DOCX, etc.)
-    "description" TEXT -- Optional description of the file
+    "file_type" TEXT,      -- Type of file (e.g., PDF, DOCX, etc.)
+    "description" TEXT     -- Optional description of the file
 );
 
 -- Music table with specific metadata for music files
 CREATE TABLE "music" (
     "id" INTEGER PRIMARY KEY AUTOINCREMENT,
-    "name" TEXT NOT NULL,
     "path" TEXT NOT NULL,
     "size" INTEGER,
     "created_at" TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
@@ -38,7 +36,6 @@ CREATE TABLE "music" (
 -- TV Shows table with specific metadata for episodes
 CREATE TABLE "tv" (
     "id" INTEGER PRIMARY KEY AUTOINCREMENT,
-    "name" TEXT NOT NULL,
     "path" TEXT NOT NULL,
     "size" INTEGER,
     "created_at" TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
@@ -54,7 +51,6 @@ CREATE TABLE "tv" (
 -- Movies table with specific metadata for films
 CREATE TABLE "movies" (
     "id" INTEGER PRIMARY KEY AUTOINCREMENT,
-    "name" TEXT NOT NULL,
     "path" TEXT NOT NULL,
     "size" INTEGER,
     "created_at" TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
@@ -70,7 +66,6 @@ CREATE TABLE "movies" (
 -- Photos table with specific metadata for images
 CREATE TABLE "photos" (
     "id" INTEGER PRIMARY KEY AUTOINCREMENT,
-    "name" TEXT NOT NULL,
     "path" TEXT NOT NULL,
     "size" INTEGER,
     "created_at" TIMESTAMP DEFAULT CURRENT_TIMESTAMP,

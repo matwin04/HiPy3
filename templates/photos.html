@@ -8,19 +8,25 @@
   <h1>Photos Storage</h1>
   <table border="1">
     <tr>
-      <th>Name</th>
+      <th>Path</th>
+      <th>Size (bytes)</th>
+      <th>Camera Model</th>
       <th>Resolution</th>
       <th>Location</th>
       <th>Date Taken</th>
-      <th>Camera Model</th>
+      <th>Description</th>
+      <th>Edit</th>
     </tr>
     {% for row in rows %}
       <tr>
-        <td>{{ row['name'] }}</td>
+        <td>{{ row['path'] }}</td>
+        <td>{{ row['size'] }}</td>
+        <td>{{ row['camera_model'] }}</td>
         <td>{{ row['resolution'] }}</td>
         <td>{{ row['location'] }}</td>
         <td>{{ row['date_taken'] }}</td>
-        <td>{{ row['camera_model'] }}</td>
+        <td>{{ row['description'] }}</td>
+        <td><a href="{{ url_for('edit_metadata', media_type='photos', id=row['id']) }}">Edit</a></td>
       </tr>
     {% endfor %}
   </table>

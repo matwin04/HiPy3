@@ -14,6 +14,7 @@
       <th>Release Year</th>
       <th>Genre</th>
       <th>Rating</th>
+      <th>Edit</th>
     </tr>
     {% for row in rows %}
       <tr>
@@ -23,6 +24,7 @@
         <td>{{ row['release_year'] }}</td>
         <td>{{ row['genre'] }}</td>
         <td>{{ row['rating'] }}</td>
+        <td><a href="{{ url_for('edit_metadata', media_type='movies', id=row['id']) }}">Edit</a></td>
       </tr>
     {% endfor %}
   </table>
